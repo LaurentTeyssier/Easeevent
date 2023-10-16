@@ -1,0 +1,42 @@
+
+//* COLORS
+$primary-color : #49b49a;
+$secondary-color: #e78860;
+$tertiary-color: #302F2e;
+
+
+//* FONT-FAMILIES
+
+$font-title: 'Josefin Slab', serif;
+$font-regular: 'Quicksand', sans-serif;
+
+
+//* FONT-SIZES
+
+$size-main-title: font size(80);
+$size-text: font size(24);
+$size-h2: font size(30);
+
+//*MARGINS
+$top-separator-margin: 2% 1% 2% 19%;
+$bot-separator-margin: 2% 19% 2% 1%;
+
+
+//*BORDERS
+
+$border-3px-solid-secondary: 3px solid $secondary-color;
+$border-3px-solid-tertiary: 3px solid $tertiary-color;
+$border-2px-solid: 2px solid;
+$primary-separator-border : $border-2px-solid $primary-color;
+$secondary-separator-border : $border-2px-solid $secondary-color;
+
+
+//* WIDTH
+
+$width-80:80%;
+
+
+//* RADIUS
+$radius-15-0: 15px 0px;
+$radius-0-15: 0px 15px;
+$radius-10: 10px;

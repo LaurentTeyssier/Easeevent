@@ -1,0 +1,438 @@
+@import 'base/base',
+        'utils/mixins',
+        'utils/variables';
+
+
+
+/*
+GLOBAL
+STYLING
+*/
+p, h2, h3, h4, h5, h6, li, a, button, legend {
+
+    font-family: $font-regular;
+}
+
+label, #cpr {
+    font-family: $font-title;
+}
+
+h2 {
+    text-align: center;
+    @include font-size(25);
+}
+
+p{
+    @include font-size(18);
+}
+
+
+/* HEADER STYLING
+*/
+
+/* HEADER BLOCK */
+
+header {
+    @include flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+
+/* LOGO */
+
+#logo {
+    
+    padding-top: 15px;
+    font-weight: bold;
+ }
+
+/* TITLE */
+
+h1 {
+    font-family: 'Josefin Slab', serif;
+     @include font-size(50);
+     padding-top: 20px;
+     padding-bottom: 20px;
+ }
+
+
+.first_e {
+    color:#49b49a;
+    display: inline-block;
+    transform: scale(-1,1);
+    -moz-transform: scale(-1, 1) rotate(-15deg);
+    -webkit-transform: scale(-1, 1) rotate(-15deg);
+    -o-transform: scale(-1, 1) rotate(-15deg);
+    -ms-transform: scale(-1, 1) rotate(-15deg);
+    transform: scale(-1, 1) rotate(-15deg);
+    margin: 0px;
+}   
+
+.second_e {
+    color: #e78860;
+    display: inline-block;
+    -webkit-transform : rotate(-15deg); 
+    -moz-transform : rotate(-15deg); 
+    -ms-transform : rotate(-15deg); 
+    -o-transform : rotate(-15deg); 
+    transform : rotate(-15deg);
+    margin: 0px;
+    
+}
+
+/* HEADER FORM */
+
+.form_hdr {
+    @include flex-column;
+}
+
+.login_hdr, .form_div {
+    @include flex-column-self-center;
+}
+
+.password_hdr {
+    @include flex-column-self-center;
+    margin-top: 3%;
+}
+
+.form_hdr a {
+    align-self: center;
+}
+
+.submit_hdr{
+    align-items: center;
+}
+
+.submit_hdr input[type="submit"] {
+    border: $border-3px-solid-secondary;
+    background-color: #FFFF;
+    width: 120px;
+    height: 25px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    cursor: pointer;
+    font-family: 'quicksand';
+    
+}
+
+/* NAVBAR STYLING
+*/
+.navbar a {
+    color:#e78860;
+}
+.navbar {
+    display: flex;
+    justify-content:space-around;
+    background-color: $tertiary-color;
+}
+
+.navbar li {
+    margin: 16px;
+}
+
+.navbar a:hover {
+    color: #49b49a;
+    border-bottom: double 5px $secondary-color;
+}
+
+
+/* SEPARATORS
+*/
+
+hr.separator_1 {
+    @include separator($width-80, $primary-separator-border, $top-separator-margin);
+}
+
+hr.separator_2 {    
+    @include separator($width-80, $secondary-separator-border, $bot-separator-margin);
+}
+
+hr.separator_3 {
+    @include separator($width-80, $secondary-separator-border, $top-separator-margin);
+}
+
+hr.separator_4 {
+    @include separator($width-80, $primary-separator-border, $bot-separator-margin);
+}
+
+
+//? EVENT INFO
+
+.event_info {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    border-top: $border-3px-solid-tertiary;
+    border-bottom: $border-3px-solid-tertiary;
+    height: 20em;    
+}
+
+.fa-rectangle-xmark {
+    
+    color: grey;
+    cursor: pointer;
+    align-self: flex-end;    
+}
+
+/*
+EVENT
+ELEMENTS
+*/
+
+.event_elements {
+    @include flex-column-space-between;
+    height: 12em;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.event_elements button {
+    align-self: flex-end;
+    margin-right: 20%;
+    background-color: #FFFF;
+    border: $border-3px-solid-secondary;
+    @include border-radius($radius-15-0);
+    height: 40px;
+    width: 120px;
+    margin-right: 15%;
+    margin-top: 3%;
+    cursor: pointer;
+    font-family: 'quicksand';
+}
+
+
+/*
+ EVENT
+ CREATION
+ FORM
+ */
+
+ .event_creation_form form {
+    @include flex-column-space-between;
+    border: $primary-separator-border;
+    @include border-radius($radius-0-15);
+    margin: 2% 25% 2% 25%;
+    padding: 2% 0% 2% 0%;
+    height: 80vh;
+}
+
+    .event_creation_form form input {
+        border: $border-3px-solid-secondary;
+        @include border-radius($radius-10);
+        width: 35vw;
+        margin-top: 1%;
+        height: 2.5vw;
+        align-self: center;
+    }
+
+    .event_creation_form div {
+        margin: auto;
+        @include flex-column-self-center;
+        
+    }
+
+    .event_creation_form label, .inscription_form_fields label {
+        min-width: 160px;
+    }
+
+    .event_creation_form input[type="submit"] {
+        align-self: flex-end;
+        background-color: #FFFF;
+        @include border-radius($radius-15-0);
+        height: 40px;
+        width: 120px;
+        margin-right: 5%;
+        margin-top: 3%;
+        cursor: pointer;
+        font-family: 'quicksand';
+        border: $border-3px-solid-secondary; 
+    }
+
+    .form_page p{
+        text-align: center;
+        @include font-size(90);
+        font-family: $font-title;
+    }
+
+ /*
+ PLACEHOLDER
+ TEXT
+ */
+
+ .inp_placeholder { 
+    @include placeholder {
+        font-family: $font-regular;        
+    }        
+  }
+  
+
+
+legend {
+    text-align: center;
+}
+
+.user, .password, .submit {
+    display: inline-block;
+}
+
+//* CARROUSEL SECTION
+// .carrousel {
+//     @include flex-column;
+//     justify-content: space-around;
+//     height: 60vh;
+    
+// }
+
+// .carrousel > * {
+//     align-self: center;
+// }
+
+// //* CARROUSEL ELEMENTS
+
+// .slider {
+//     width: 300px;
+//     text-align: center;
+//     overflow: hidden;
+//   }
+  
+//   .slides {
+//     display: flex;
+//     overflow-x: auto;
+    
+//     border-radius: 5px;
+    
+//     scroll-behavior: smooth;
+    
+//     -webkit-overflow-scrolling: touch;
+//     scroll-snap-points-x: repeat(300px);
+//     scroll-snap-type: mandatory;
+//   }
+//   .slides::-webkit-scrollbar {
+//     width: 10px;
+//     height: 10px;
+//   }
+//   .slides::-webkit-scrollbar-thumb {
+//     background: black;
+//     @include border-radius($radius-10);
+//   }
+//   .slides::-webkit-scrollbar-track {
+//     background: transparent;
+//   }
+//   .slides > div {
+//     flex-shrink: 0;
+//     width: 300px;
+//     height: 300px;
+//     @include border-radius($radius-10);
+//     background: #eee;
+//     transform-origin: center center;
+//     transform: scale(1);
+//     transition: transform 0.5s;
+//     position: relative;
+    
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 100px;
+//   }
+//   .slides > div:target {
+//     transform: scale(0.8);
+//   }
+  
+//   div > img {
+//     object-fit: cover;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+  
+//   .slider > a {
+//     display: inline-flex;
+//     width: 1.5rem;
+//     height: 1.5rem;
+//     background: white;
+//     text-decoration: none;
+//     align-items: center;
+//     justify-content: center;
+//     border-radius: 50%;
+//     margin: 0 0 0.5rem 0;
+//     position: relative;
+//   }
+//   .slider > a:active {
+//     top: 1px;
+//   }
+//   .slider > a:focus {
+//     background: #000;
+//   }
+  
+//   /* Don't need button navigation */
+//   @supports (scroll-snap-type) {
+//     .slider > a {
+//       display: none;
+//     }
+//   }
+
+//* FOOTER STYLING
+footer{
+    @include flex-row;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    margin-top: 2%;
+}
+
+footer ul {
+   @include flex-row;
+    justify-content: space-between;
+}
+footer ul li {
+    margin-right: 4%;
+    margin-left: 4%;
+    padding-right: 2%;    
+}
+#nav_footer li {
+    border-right: $border-3px-solid-secondary;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+.fa-brands:hover {
+  color:#e78860;
+  cursor: pointer;
+}
+
+//*EVENT DELETION DIALOG
+
+.confirmation_dialog{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;    
+}
+
+#confirm_button, #cancel_button {
+    background-color: #FFFF;
+    border: $border-3px-solid-secondary;
+    height: 40px;
+    width: 120px;
+    margin-top: 3%;
+    cursor: pointer;
+    font-family: 'quicksand';
+    @include border-radius($radius-15-0);
+}
+
+#empty {
+    text-align: center;
+    display: none;
+}

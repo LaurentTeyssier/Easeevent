@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Quicksand&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/*
+GLOBAL
+STYLING
+*/
+p, h2, h3, h4, h5, h6, li, a, button, legend {
+  font-family: "Quicksand", sans-serif;
+}
+
+label, #cpr {
+  font-family: "Josefin Slab", serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* HEADER STYLING
+*/
+/* HEADER BLOCK */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+
+/* LOGO */
+#logo {
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+/* TITLE */
+h1 {
+  font-family: "Josefin Slab", serif;
+  font-size: 50px;
+  font-size: 5rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.first_e {
+  color: #49b49a;
+  display: inline-block;
+  transform: scale(-1, 1);
+  transform: scale(-1, 1) rotate(-15deg);
+  margin: 0px;
+}
+
+.second_e {
+  color: #e78860;
+  display: inline-block;
+  transform: rotate(-15deg);
+  margin: 0px;
+}
+
+/* HEADER FORM */
+.form_hdr {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_hdr, .form_div {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.password_hdr {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 3%;
+}
+
+.form_hdr a {
+  align-self: center;
+}
+
+.submit_hdr {
+  align-items: center;
+}
+
+.submit_hdr input[type=submit] {
+  border: 3px solid #e78860;
+  background-color: white;
+  width: 120px;
+  height: 25px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  cursor: pointer;
+  font-family: "quicksand";
+}
+
+/* NAVBAR STYLING
+*/
+.navbar a {
+  color: #e78860;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #302F2e;
+}
+
+.navbar li {
+  margin: 16px;
+}
+
+.navbar a:hover {
+  color: #49b49a;
+  border-bottom: double 5px #e78860;
+}
+
+/* SEPARATORS
+*/
+hr.separator_1 {
+  width: 80%;
+  border: 2px solid #49b49a;
+  margin: 2% 1% 2% 19%;
+}
+
+hr.separator_2 {
+  width: 80%;
+  border: 2px solid #e78860;
+  margin: 2% 19% 2% 1%;
+}
+
+hr.separator_3 {
+  width: 80%;
+  border: 2px solid #e78860;
+  margin: 2% 1% 2% 19%;
+}
+
+hr.separator_4 {
+  width: 80%;
+  border: 2px solid #49b49a;
+  margin: 2% 19% 2% 1%;
+}
+
+.event_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  border-top: 3px solid #302F2e;
+  border-bottom: 3px solid #302F2e;
+  height: 20em;
+}
+
+.fa-rectangle-xmark {
+  color: grey;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/*
+EVENT
+ELEMENTS
+*/
+.event_elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12em;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.event_elements button {
+  align-self: flex-end;
+  margin-right: 20%;
+  background-color: white;
+  border: 3px solid #e78860;
+  border-radius: 15px 0px;
+  height: 40px;
+  width: 120px;
+  margin-right: 15%;
+  margin-top: 3%;
+  cursor: pointer;
+  font-family: "quicksand";
+}
+
+/*
+ EVENT
+ CREATION
+ FORM
+ */
+.event_creation_form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #49b49a;
+  border-radius: 0px 15px;
+  margin: 2% 25% 2% 25%;
+  padding: 2% 0% 2% 0%;
+  height: 80vh;
+}
+
+.event_creation_form form input {
+  border: 3px solid #e78860;
+  border-radius: 10px;
+  width: 35vw;
+  margin-top: 1%;
+  height: 2.5vw;
+  align-self: center;
+}
+
+.event_creation_form div {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.event_creation_form label, .inscription_form_fields label {
+  min-width: 160px;
+}
+
+.event_creation_form input[type=submit] {
+  align-self: flex-end;
+  background-color: white;
+  border-radius: 15px 0px;
+  height: 40px;
+  width: 120px;
+  margin-right: 5%;
+  margin-top: 3%;
+  cursor: pointer;
+  font-family: "quicksand";
+  border: 3px solid #e78860;
+}
+
+.form_page p {
+  text-align: center;
+  font-size: 90px;
+  font-size: 9rem;
+  font-family: "Josefin Slab", serif;
+}
+
+/*
+PLACEHOLDER
+TEXT
+*/
+.inp_placeholder::-webkit-input-placeholder {
+  font-family: "Quicksand", sans-serif;
+}
+.inp_placeholder:-moz-placeholder {
+  font-family: "Quicksand", sans-serif;
+}
+.inp_placeholder::-moz-placeholder {
+  font-family: "Quicksand", sans-serif;
+}
+.inp_placeholder:-ms-input-placeholder {
+  font-family: "Quicksand", sans-serif;
+}
+
+legend {
+  text-align: center;
+}
+
+.user, .password, .submit {
+  display: inline-block;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+  margin-top: 2%;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer ul li {
+  margin-right: 4%;
+  margin-left: 4%;
+  padding-right: 2%;
+}
+
+#nav_footer li {
+  border-right: 3px solid #e78860;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.fa-brands:hover {
+  color: #e78860;
+  cursor: pointer;
+}
+
+.confirmation_dialog {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#confirm_button, #cancel_button {
+  background-color: white;
+  border: 3px solid #e78860;
+  height: 40px;
+  width: 120px;
+  margin-top: 3%;
+  cursor: pointer;
+  font-family: "quicksand";
+  border-radius: 15px 0px;
+}
+
+#empty {
+  text-align: center;
+  display: none;
+}/*# sourceMappingURL=style.css.map */
