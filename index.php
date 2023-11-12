@@ -25,6 +25,9 @@ session_start();
         case '/easeevent/roleadd':
             $rolesController->addRoles();
             break;    
+        case '/easeevent/eventview':
+            $eventController->getAllEvents();
+            break;    
         case '/easeevent/eventadd':
             $eventController->addEvent();
             break;    

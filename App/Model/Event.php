@@ -96,5 +96,16 @@ class Event extends BddConnect{
             die('Error : '.$e->getMessage());
         }
     }
+
+    public function findAll(){
+        try{
+            $req= $this->connexion()->prepare(
+            'SELECT id_event, title_event, place_event, begin_date_event, end_date_event, description_event FROM event');
+            $req->execute();
+            return $req->fetchAll(\PDO::FETCH_CLASS| \PDO::FETCH_PROPS_LATE, Event::class);
+        }catch(\Exception $e){
+            die('Error : '.$e->getMessage());
+        }
+    }
 }
 ?> 

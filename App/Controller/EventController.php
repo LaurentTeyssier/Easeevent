@@ -39,4 +39,16 @@ class EventController extends Event{
         Template::render('header.php', 'Nouvel événement', 'vueAddEvent.php', 'footer.php', 
         $error, 'script.js', 'style.css');
     }
+
+    public function getAllEvents(){
+        $error = "";
+        $events =$this->findAll();
+        
+        
+        if(empty($events)){
+            $error = "Aucun événement.";
+        }
+        Template::render('header.php', 'Mes événements', 'vueAllEvent.php', 'footer.php', 
+        $error, 'script.js', 'style.css', $events);
+    }
 }

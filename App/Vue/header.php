@@ -44,5 +44,14 @@
             <a href="http://">Mot de passe oublié ?</a>
         </div>
         </header>
+
+        <section>
+            <ul class="navbar">
+                <li><a href="./">Accueil</a></li>
+                <li><a href="./eventadd">Nouvel Événement</a></li>
+                <li><a href="./eventview">Mes Événements</a></li>
+                <li><a href="./account">Mon Compte</a></li>
+            </ul>
+        </section>
 <?php endif;?>
 <?php $header = ob_get_clean()?>

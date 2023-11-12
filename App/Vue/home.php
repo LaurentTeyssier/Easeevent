@@ -2,14 +2,14 @@
     <main>
 
         <!--NAVBAR-->
-        <section>
+        <!-- <section>
             <ul class="navbar">
                 <li><a href="">Accueil</a></li>
                 <li><a href="./eventadd">Nouvel Événement</a></li>
                 <li><a href="./my_events">Mes Événements</a></li>
                 <li><a href="./account">Mon Compte</a></li>
             </ul>
-        </section>
+        </section> -->
 
         <!--TOP SEPARATORS-->
         <hr class="separator_1">
