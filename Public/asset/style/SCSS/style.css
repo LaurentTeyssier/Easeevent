@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Quicksand&display=swap");
 * {
   margin: 0%;
@@ -340,4 +341,22 @@ footer ul li {
 #empty {
   text-align: center;
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+  #headTitle {
+    margin-left: 0; /* Réinitialisation de la marge pour que le texte reste centre*/
+    text-align: center;
+  }
+  nav {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */

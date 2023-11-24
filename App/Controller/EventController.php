@@ -2,10 +2,14 @@
 namespace App\Controller;
 use App\vue\Template;
 use App\Model\Event;
+use App\Model\Participant;
 use App\Utils\Utilitaire;
 class EventController extends Event{
     public function addEvent(){
         $error = "";
+        $manager = new Participant();
+        $manager->setId(Utilitaire::cleanInput($_SESSION['id']));
+       
         //Tester si le form est submit
         if(isset($_POST['submit'])){
             //Tester si les champs sont remplis
@@ -17,6 +21,7 @@ class EventController extends Event{
             $this->setBeginDate(Utilitaire::cleanInput($_POST['begin_date_event']));
             $this->setEndDate(Utilitaire::cleanInput($_POST['end_date_event']));
             $this->setDescription(Utilitaire::cleanInput($_POST['description_event']));
+            $this->getManager()->setId(Utilitaire::cleanInput($_SESSION['id']));
             
             
            
@@ -42,6 +47,9 @@ class EventController extends Event{
 
     public function getAllEvents(){
         $error = "";
+        $manager = new Participant();
+        $manager->setId(Utilitaire::cleanInput($_SESSION['id']));
+        
         $events =$this->findAll();
         
         

@@ -67,12 +67,12 @@ class Participant extends BddConnect{
 
     public function add(){
         try{
-            $firstname = $this->firstname_participant;
-            $name = $this->name_participant;
-            $email = $this->email_participant;
-            $phone = $this->phone_participant;
-            $password = $this->password_participant;
-            $picture = $this->picture_participant;
+            $firstname = $this->getFirstname();
+            $name = $this->getName();
+            $email = $this->getEmail();
+            $phone = $this->getPhone();
+            $password = $this->getPassword();
+            $picture = $this->getPicture();
             
             $req = $this->connexion()->prepare(
                 "INSERT INTO participant(firstname_participant, name_participant, email_participant, phone_participant, password_participant, picture_participant)VALUES(?,?,?,?,?,?)"
@@ -94,7 +94,7 @@ class Participant extends BddConnect{
 
     public function findOneBy(){
         try {
-            $email = $this->email_participant;
+            $email = $this->getEmail();
             $req = $this->connexion()->prepare(
                 "SELECT id_participant, firstname_participant, name_participant, email_participant, phone_participant, password_participant, picture_participant FROM participant WHERE email_participant = ?");
             $req->bindParam(1, $email, \PDO::PARAM_STR);
