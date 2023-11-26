@@ -1,4 +1,10 @@
 <?php ob_start()?>
+
+<hr class="separator_1">
+</hr>
+<hr class="separator_2">
+</hr>
+        
 <h2>Mes Événements</h2>
     <?php foreach($tab as $event):?>
         <section>
@@ -34,5 +40,12 @@
     <div class="otherEvent">
         <h2>Autres Événements</h2>
     </div>
+
+<hr class="separator_3">
+</hr>
+<hr class="separator_4">
+</hr>
+
+
     <p><?=$error?></p>
 <?php $content = ob_get_clean()?>

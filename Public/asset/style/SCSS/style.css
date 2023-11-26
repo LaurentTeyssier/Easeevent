@@ -30,6 +30,11 @@ p {
   font-size: 1.8rem;
 }
 
+input:focus {
+  outline: 3px dashed #49b49a;
+  border: hidden;
+}
+
 /* HEADER STYLING
 */
 /* HEADER BLOCK */
@@ -98,8 +103,8 @@ h1 {
 }
 
 .submit_hdr input[type=submit] {
-  border: 3px solid #e78860;
-  background-color: white;
+  border: 3px solid #49b49a;
+  background-color: #49b49a;
   width: 120px;
   height: 25px;
   margin-top: 3%;
@@ -222,6 +227,7 @@ ELEMENTS
   margin-top: 1%;
   height: 2.5vw;
   align-self: center;
+  height: 5vh;
 }
 
 .event_creation_form div {
@@ -237,7 +243,7 @@ ELEMENTS
 
 .event_creation_form input[type=submit] {
   align-self: flex-end;
-  background-color: white;
+  background-color: #49b49a;
   border-radius: 15px 0px;
   height: 40px;
   width: 120px;
@@ -245,7 +251,7 @@ ELEMENTS
   margin-top: 3%;
   cursor: pointer;
   font-family: "quicksand";
-  border: 3px solid #e78860;
+  border: 3px solid #49b49a;
 }
 
 .form_page p {
@@ -305,6 +311,10 @@ footer ul li {
   border-right: 3px solid #e78860;
 }
 
+#nav_footer li:hover {
+  border-right: 3px solid #49b49a;
+}
+
 .nobr {
   white-space: nowrap;
 }
@@ -343,6 +353,25 @@ footer ul li {
   display: none;
 }
 
+@media screen and (max-width: 1300px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 3vw;
+  }
+  footer ul {
+    padding: 5vh 0;
+  }
+  #nav_footer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  #nav_footer li {
+    padding-bottom: 1vh;
+  }
+}
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -356,7 +385,33 @@ footer ul li {
     margin-left: 0; /* Réinitialisation de la marge pour que le texte reste centre*/
     text-align: center;
   }
-  nav {
+  .navbar {
+    display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 3vw;
+    text-align: center;
+  }
+  .event_creation_form input[type=submit] {
+    width: 100%;
+    margin: auto;
+    background-color: #49b49a;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 3vw;
+  }
+  footer ul {
+    padding: 5vh 0;
+  }
+  #nav_footer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  #nav_footer li {
+    padding-bottom: 1vh;
   }
 }/*# sourceMappingURL=style.css.map */

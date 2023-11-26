@@ -93,4 +93,10 @@ class ParticipantController extends Participant{
         $error, 'script.js', 'style.css');
         
 }
+
+public function deconnexionParticipant(){
+    unset($_COOKIE['PHPSESSID']);
+    session_destroy();
+    header('Refresh:1 ; URL=http://localhost/easeevent');
+}
 }

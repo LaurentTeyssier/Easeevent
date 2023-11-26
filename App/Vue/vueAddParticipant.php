@@ -1,8 +1,12 @@
-<?php ob_start()?>
-    <div class="form_page">
-        <p><span class="first_e">e</span><span class="second_e">e</span></p>
-        <section class="event_creation_form">
-            <form action="" method="post" enctype="multipart/form-data">        
+<?php ob_start() ?>
+
+<hr class="separator_1">
+</hr>
+<hr class="separator_2">
+</hr>
+<div class="form_page">
+    <section class="event_creation_form">
+        <form action="" method="post" enctype="multipart/form-data">
             <div>
                 <label for="firstname_participant">Prénom :</label>
                 <input type="text" name="firstname_participant" placeholder="Saisir le prénom">
@@ -26,15 +30,21 @@
             <div>
                 <label for="repeat_password_participant">Confirmer password :</label>
                 <input type="password" name="repeat_password_participant" placeholder="Confirmer le mot de passe">
-            </div>    
+            </div>
             <div>
                 <label for="picture_participant">Choisir un avatar :</label>
                 <input type="file" name="picture_participant">
-            </div>    
-                <input type="submit" value="Ajouter" name="submit">
+            </div>
+            <input type="submit" value="S'inscrire" name="submit">
             <div><?= $error ?></div>
-            
-            </form>
-            </section>
-    </div>
-    <?php $content = ob_get_clean()?>
+
+        </form>
+    </section>
+</div>
+
+<hr class="separator_3">
+</hr>
+<hr class="separator_4">
+</hr>
+
+<?php $content = ob_get_clean() ?>

@@ -14,47 +14,50 @@ session_start();
     $url = parse_url($_SERVER['REQUEST_URI']);
     //test si l'url posséde une route sinon on renvoi à la racine
     $path = isset($url['path']) ? $url['path'] : '/';
+
+
+    if(isset($_SESSION['connected'])) {
     //routeur
-    switch ($path) {
-        case '/easeevent/':
-            $homeController->getHome();
-            break;
-        case '/easeevent/participantadd':
-            $participantController->addParticipant();
-            break;
-        case '/easeevent/roleadd':
-            $rolesController->addRoles();
-            break;    
-        case '/easeevent/eventview':
-            $eventController->getAllEvents();
-            break;    
-        case '/easeevent/eventadd':
-            $eventController->addEvent();
-            break;    
-        case '/easeevent/participantconnect':
-            $participantController->connexionParticipant();
-            break;    
-        default:
-            $homeController->get404();
-            break;
+        switch ($path) {
+            case '/easeevent/':
+                $homeController->getHome();
+                break;
+            case '/easeevent/participantadd':
+                $participantController->addParticipant();
+                break;
+            case '/easeevent/roleadd':
+                $rolesController->addRoles();
+                break;    
+            case '/easeevent/eventview':
+                $eventController->getAllEvents();
+                break;    
+            case '/easeevent/eventadd':
+                $eventController->addEvent();
+                break;    
+            case '/easeevent/participantdisconnect':
+                $participantController->deconnexionParticipant();
+                break;    
+            default:
+                $homeController->get404();
+                break;
+        }
+    } else {
+        switch ($path) {
+            case '/easeevent/':
+                $homeController->getHome();
+                break;
+            case '/easeevent/participantadd':
+                $participantController->addParticipant();
+                break;
+            case '/easeevent/participantconnect':
+                $participantController->connexionParticipant();
+                break;
+            default:
+                $homeController->get404();
+                break;
+        }
     }
 
-
-
 //     //Version connectée    
-// if(isset($_SESSION['connected'])) {
-//     //routeur
-//         switch ($path) {
-//             case '/easeevent/':
-//                 include './App/Vue/home.php';
-//                 break;
-//             case '/easeevent/deconnexion':
-//                     $userController->deconnexionUser();
-//                 break;        
-//             default:
-//                 $homeController->get404();
-//                 break;
-//     }
-// }
-    // } else {
-    //     switch($path){
+
+    
